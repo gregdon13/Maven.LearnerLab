@@ -1,4 +1,4 @@
-package io.zipcoder.interfaces;
+package Classes;
 
 public class Person {
     final long id;

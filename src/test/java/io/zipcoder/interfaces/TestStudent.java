@@ -1,5 +1,7 @@
 package io.zipcoder.interfaces;
 
+import Classes.Person;
+import Classes.Student;
 import org.junit.Assert;
 import org.junit.Test;
 

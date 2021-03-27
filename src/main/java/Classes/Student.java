@@ -1,6 +1,8 @@
-package io.zipcoder.interfaces;
+package Classes;
 
-public class Student extends Person implements Learner{
+import io.zipcoder.interfaces.Learner;
+
+public class Student extends Person implements Learner {
     double totalStudyTime;
 
 
