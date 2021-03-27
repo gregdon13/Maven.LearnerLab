@@ -5,7 +5,7 @@ import io.zipcoder.interfaces.Teacher;
 
 import java.util.ArrayList;
 
-public class Instructors extends People<Instructor>{
+public class Instructors extends People<Person>{
     public Instructor villain = new Instructor(666, "Nobles");
     public Instructor masterMind = new Instructor(1001, "Younger");
     public Instructor windu = new Instructor(314, "Dolio");
@@ -16,11 +16,11 @@ public class Instructors extends People<Instructor>{
 public ArrayList<Instructor> teacherLounge;
 
     private Instructors() {
-        teacherLounge = super.personList;
-        teacherLounge.add(villain);
-        teacherLounge.add(masterMind);
-        teacherLounge.add(windu);
-        teacherLounge.add(helper);
+        teacherLounge = new ArrayList<Instructor>();
+        teacherLounge.add(Educator.VILLAIN.getInstructor());
+        teacherLounge.add(Educator.MASTERMIND.getInstructor());
+        teacherLounge.add(Educator.WINDU.getInstructor());
+        teacherLounge.add(Educator.HELPER.getInstructor());
     }
 
     public static Instructors getInstance() {

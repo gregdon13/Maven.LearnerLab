@@ -1,5 +1,6 @@
 package io.zipcoder.interfaces;
 
+import Classes.Educator;
 import Classes.Instructors;
 import org.junit.Assert;
 import org.junit.Test;
@@ -12,10 +13,10 @@ public class InstructorsTest {
         Instructors instructors = Instructors.getInstance();
 
         //Then
-        Assert.assertTrue(instructors.teacherLounge.contains(instructors.villain));
-        Assert.assertTrue(instructors.teacherLounge.contains(instructors.masterMind));
-        Assert.assertTrue(instructors.teacherLounge.contains(instructors.windu));
-        Assert.assertTrue(instructors.teacherLounge.contains(instructors.helper));
+        Assert.assertTrue(instructors.teacherLounge.contains(Educator.HELPER));
+        Assert.assertTrue(instructors.teacherLounge.contains(Educator.MASTERMIND));
+        Assert.assertTrue(instructors.teacherLounge.contains(Educator.WINDU));
+        Assert.assertTrue(instructors.teacherLounge.contains(Educator.VILLAIN));
 
     }
 }
