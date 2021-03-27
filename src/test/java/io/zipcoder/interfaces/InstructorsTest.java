@@ -12,11 +12,13 @@ public class InstructorsTest {
         //Given
         Instructors instructors = Instructors.getInstance();
 
+
+
         //Then
-        Assert.assertTrue(instructors.teacherLounge.contains(Educator.HELPER));
-        Assert.assertTrue(instructors.teacherLounge.contains(Educator.MASTERMIND));
-        Assert.assertTrue(instructors.teacherLounge.contains(Educator.WINDU));
-        Assert.assertTrue(instructors.teacherLounge.contains(Educator.VILLAIN));
+        Assert.assertTrue(instructors.teacherLounge.contains(Educator.HELPER.getInstructor()));
+        Assert.assertTrue(instructors.teacherLounge.contains(Educator.MASTERMIND.getInstructor()));
+        Assert.assertTrue(instructors.teacherLounge.contains(Educator.WINDU.getInstructor()));
+        Assert.assertTrue(instructors.teacherLounge.contains(Educator.VILLAIN.getInstructor()));
 
     }
 }
