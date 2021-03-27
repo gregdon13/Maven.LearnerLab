@@ -20,24 +20,24 @@ public class Students extends People {
 
     final static Students students_instance = new Students();
 
-    public ArrayList<Student> classroom;
+    public Student[] classroom;
 
     private Students() {
-        classroom = new ArrayList<Student>();
-        classroom.add(jorge);
-        classroom.add(kelly);
-        classroom.add(ryan);
-        classroom.add(lena);
-        classroom.add(monali);
-        classroom.add(greg);
-        classroom.add(hazel);
-        classroom.add(chris);
-        classroom.add(mike);
-        classroom.add(abe);
-        classroom.add(xiong);
-        classroom.add(ashley);
-        classroom.add(justin);
-        classroom.add(theresa);
+        classroom = new Student[14];
+        classroom[0] = jorge;
+        classroom[1] = kelly;
+        classroom[2] = ryan;
+        classroom[3] = lena;
+        classroom[4] = monali;
+        classroom[5] = greg;
+        classroom[6] = hazel;
+        classroom[7] = chris;
+        classroom[8] = mike;
+        classroom[9] = abe;
+        classroom[10] = xiong;
+        classroom[11] = ashley;
+        classroom[12] = justin;
+        classroom[13] = theresa;
     }
 
     public static Students getInstance() {
