@@ -2,7 +2,7 @@ package Classes;
 
 import java.util.ArrayList;
 
-public class Students extends People {
+public class Students extends People<Student> {
     public Student jorge = new Student(100, "Jorge");
     public Student kelly = new Student(200, "Kelly");
     public Student ryan = new Student(300, "Ryan");
@@ -44,4 +44,7 @@ public class Students extends People {
         return students_instance;
     }
 
+    public Person[] toArray() {
+        return classroom;
+    }
 }

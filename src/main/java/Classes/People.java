@@ -1,18 +1,19 @@
 package Classes;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class People implements Iterable {
-    List<Person> personList;
+public abstract class People<E extends Person> implements Iterable {
+    public ArrayList<E> personList;
 
-    public void add(Person person) {
+    public void add(E person) {
         personList.add(person);
     }
 
-    public Person findById(long id) {
-        Person found = new Person(00, "");
-        for (Person person : personList) {
+    public E findById(long id) {
+        E found = null;
+        for (E person : personList) {
             if (person.getId() == id) {
                 found = person;
             }
@@ -50,16 +51,14 @@ public class People implements Iterable {
         return personList.size();
     }
 
-    public Person[] toArray() {
-        Person[] personArr = new Person[count()];
-        for (int i = 0; i < personList.size(); i++) {
-            personArr[i] = personList.get(i);
-        }
-        return personArr;
+    public abstract Person[] toArray();
+
+
+    public Iterator<E> iterator() {
+        return personList.listIterator();
     }
 
-
-    public Iterator<Person> iterator() {
-        return personList.listIterator();
+    public ArrayList<E> getArr() {
+        return this.personList;
     }
 }

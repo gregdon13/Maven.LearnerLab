@@ -6,7 +6,6 @@ import java.util.HashMap;
 
 public class ZipCodeWilmington {
     Students students = Students.getInstance();
-    Instructors instructors = Instructors.getInstance();
 
     final static ZipCodeWilmington zcw_instance = new ZipCodeWilmington();
 
